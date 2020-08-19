@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions;
-
 
 use Exception;
 use Illuminate\Database\Eloquent\Model;
@@ -45,7 +43,7 @@ abstract class CrudModelAction extends AbstractAction
     }
 
     /**
-     * Create or update the Model
+     * Create or update the Model.
      *
      * @return Response
      * @throws Exception
@@ -59,7 +57,7 @@ abstract class CrudModelAction extends AbstractAction
             // Model passes validation checks
             if (
                 (method_exists($this, 'validate') && $this->validate())
-                || !method_exists($this, 'validate')
+                || ! method_exists($this, 'validate')
             ) {
                 // Save the model
                 $this->model = $this->handle();
