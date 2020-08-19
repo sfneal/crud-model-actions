@@ -24,7 +24,7 @@ trait ResponseMessages
     /**
      * Response message sent on success
      *
-     * @param string $message
+     * @param string|null $message
      * @return string
      */
     protected function successMessage(string $message = null): string {
