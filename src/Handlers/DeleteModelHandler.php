@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Handlers;
-
 
 use Exception;
 use Illuminate\Database\Eloquent\Model;
@@ -10,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 trait DeleteModelHandler
 {
     /**
-     * Save or update the Model
+     * Save or update the Model.
      *
      * @return Model
      * @throws Exception

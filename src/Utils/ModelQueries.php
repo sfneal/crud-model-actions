@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Utils;
-
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -17,7 +15,7 @@ trait ModelQueries
     protected $model;
 
     /**
-     * The Eloquent Model class
+     * The Eloquent Model class.
      *
      * @var AbstractModel|Model
      */
@@ -34,7 +32,7 @@ trait ModelQueries
     protected $eagerLoadRelationships = [];
 
     /**
-     * Set the $model property value
+     * Set the $model property value.
      *
      *  - if an integer model_key value is passed, find the model
      *  - if a model instance is passed, declare the model
@@ -42,7 +40,8 @@ trait ModelQueries
      * @param int|Model|null $model
      * @return Model|null
      */
-    private function resolveModel($model) {
+    private function resolveModel($model)
+    {
         // todo: should there be a relatedModelClass or modelRelation attr?
         // $model is a Model class
         if ($model instanceof $this->modelClass) {
@@ -56,7 +55,7 @@ trait ModelQueries
     }
 
     /**
-     * Retrieve the Model's query builder
+     * Retrieve the Model's query builder.
      *
      * @return QueryBuilder|Builder
      */

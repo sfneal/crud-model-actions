@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions;
-
 
 use App\Http\Controllers\Traits\StatusUpdateResponse;
 use Illuminate\Database\Eloquent\Model;
@@ -13,7 +11,7 @@ abstract class BaseUpdateModelPublicStatusAction extends CrudModelAction
     use StatusUpdateResponse;
 
     /**
-     * The Eloquent Model class
+     * The Eloquent Model class.
      *
      * @var AbstractModelWithPublicStatus
      */
@@ -25,7 +23,7 @@ abstract class BaseUpdateModelPublicStatusAction extends CrudModelAction
     protected $model;
 
     /**
-     * Update a Model's 'public_status' attribute
+     * Update a Model's 'public_status' attribute.
      *
      * @return Model
      */
@@ -40,12 +38,13 @@ abstract class BaseUpdateModelPublicStatusAction extends CrudModelAction
     }
 
     /**
-     * Return the default success response
+     * Return the default success response.
      *
      * @param string|null $response
      * @return string
      */
-    protected function successResponse(string $response = null): string {
+    protected function successResponse(string $response = null): string
+    {
         return self::statusUpdateResponse($this->model);
     }
 }
