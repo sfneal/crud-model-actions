@@ -5,12 +5,13 @@ namespace Sfneal\CrudModelActions\Utils;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Sfneal\Events\AbstractEvent;
 use Sfneal\Models\AbstractModel;
 
 trait ModelEvents
 {
     /**
-     * @var string Model Tracking Event to fire
+     * @var AbstractEvent Model Tracking Event to fire
      */
     protected $trackingEvent;
 
