@@ -22,6 +22,7 @@
         "laravel/framework": "^7.25",
         "sfneal/actions": "^0.1.2",
         "sfneal/js-response-helpers": "^0.1.0",
+        "sfneal/laravel-helpers": "^0.1.0",
         "sfneal/models": "^0.1.1"
     },
     "require-dev": {
