@@ -66,8 +66,9 @@ abstract class CrudModelAction extends AbstractAction
                 session()->flash('success', $this->successMessage());
 
                 // Fire TrackActivity Event
-                // todo: make this optional
-                $this->fireEvent();
+                if (method_exists($this, 'fireEvent')) {
+                    $this->fireEvent();
+                }
 
                 // Return success response
                 return response($this->successResponse(), 200);
