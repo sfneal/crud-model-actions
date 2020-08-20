@@ -6,19 +6,23 @@ namespace Sfneal\CrudModelActions\Utils;
 
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Models\AbstractModel;
-use Support\Tracking\Events\TrackActivityEvent;
 
 trait ModelEvents
 {
     /**
-     * @var string Tracking Event to fire
+     * @var string Model Tracking Event to fire
      */
-    protected $trackingEvent = TrackActivityEvent::class;
+    protected $trackingEvent;
 
     /**
      * @var AbstractModel|Model
      */
     private $trackingEventModel;
+
+    /**
+     * @var bool Determine if the TrackingEvent was fired
+     */
+    private $trackingEventWasFired;
 
     /**
      * Fire the trackingEvent
@@ -27,7 +31,10 @@ trait ModelEvents
      */
     protected function fireEvent()
     {
-        event(new $this->trackingEvent($this->trackingEventModel()));
+        if (isset($this->trackingEvent)) {
+            event(new $this->trackingEvent($this->trackingEventModel()));
+            $this->trackingEventWasFired = true;
+        }
     }
 
     /**
@@ -46,5 +53,15 @@ trait ModelEvents
         }
 
         return $this->trackingEventModel ?? $this->model;
+    }
+
+    /**
+     * Determine if the TrackingEvent was fired
+     *
+     * @return bool
+     */
+    protected function wasTrackingEventFired(): bool
+    {
+        return $this->trackingEventWasFired;
     }
 }
