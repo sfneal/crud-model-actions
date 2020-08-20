@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Utils;
-
 
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Events\AbstractEvent;
@@ -26,7 +24,7 @@ trait ModelEvents
     private $trackingEventWasFired;
 
     /**
-     * Fire the trackingEvent
+     * Fire the trackingEvent.
      *
      * @return void
      */
@@ -39,7 +37,7 @@ trait ModelEvents
     }
 
     /**
-     * Retrieve the Model to be used in the fireEvent() method
+     * Retrieve the Model to be used in the fireEvent() method.
      *
      *  - optionally set a the $trackingEventModel property
      *  - useful for using a different model in the trackingEvent than the resolved/saved model
@@ -57,7 +55,7 @@ trait ModelEvents
     }
 
     /**
-     * Determine if the TrackingEvent was fired
+     * Determine if the TrackingEvent was fired.
      *
      * @return bool
      */
