@@ -85,7 +85,7 @@ abstract class CrudModelAction extends AbstractAction
         catch (Exception $exception) {
 
             // Throw errors in dev
-            if (env('APP_ENV') == 'development') {
+            if (isDevelopmentEnvironment()) {
                 throw $exception;
             }
 
