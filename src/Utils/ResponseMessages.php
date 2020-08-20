@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Utils;
-
 
 trait ResponseMessages
 {
@@ -22,12 +20,13 @@ trait ResponseMessages
     private $successNoun;
 
     /**
-     * Response message sent on success
+     * Response message sent on success.
      *
      * @param string|null $message
      * @return string
      */
-    protected function successMessage(string $message = null): string {
+    protected function successMessage(string $message = null): string
+    {
         // Set the message during runtime
         if (isset($message)) {
             $this->successMessage = $message;
@@ -38,7 +37,6 @@ trait ResponseMessages
             return $this->successMessage;
         }
 
-
         // Return the default success message
         else {
             return "{$this->successNoun()} has been {$this->successActionVerb()} successfully.";
@@ -46,7 +44,7 @@ trait ResponseMessages
     }
 
     /**
-     * Retrieve the 'noun' to be used as the object of the success message
+     * Retrieve the 'noun' to be used as the object of the success message.
      *
      * @param string|null $noun
      * @return string
@@ -63,7 +61,7 @@ trait ResponseMessages
     }
 
     /**
-     * Action verb to be used in to the success message
+     * Action verb to be used in to the success message.
      *
      * @param string|null $verb
      * @return string
@@ -73,22 +71,24 @@ trait ResponseMessages
         if (isset($verb)) {
             $this->successActionVerb = $verb;
         }
+
         return strtolower($this->successActionVerb ?? $this->model->mostRecentChange());
     }
 
     /**
-     * Response message sent on failure
+     * Response message sent on failure.
      *
      * @return string
      */
     protected function failMessage(): string
     {
         $model = strtolower($this->getModelShortName());
+
         return "Error! Unable to save or update the {$model}.";
     }
 
     /**
-     * Retrieve the Model class's short name (without namespace)
+     * Retrieve the Model class's short name (without namespace).
      *
      * @return string
      */

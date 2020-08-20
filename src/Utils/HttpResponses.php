@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Utils;
-
 
 trait HttpResponses
 {
@@ -12,7 +10,7 @@ trait HttpResponses
     private $successResponse;
 
     /**
-     * Return the default success response
+     * Return the default success response.
      *
      * @param string|null $response
      * @return string
@@ -29,7 +27,7 @@ trait HttpResponses
     }
 
     /**
-     * Return the default error response
+     * Return the default error response.
      *
      * @return string
      */
