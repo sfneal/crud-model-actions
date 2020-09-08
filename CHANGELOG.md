@@ -6,5 +6,5 @@ All notable changes to `crud-model-actions` will be documented in this file
 - initial release
 
 
-## 0.1.0 - 2020-08-20
+## 0.1.1 - 2020-08-20
 - fix executing of fireEvent method to be optional
