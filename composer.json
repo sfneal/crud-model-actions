@@ -16,11 +16,11 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "laravel/framework": ">=7.0",
         "sfneal/actions": "^0.1.2",
         "sfneal/js-response-helpers": "^0.1.0",
-        "sfneal/laravel-helpers": "^0.1.0",
+        "sfneal/laravel-helpers": "^0.2.0",
         "sfneal/models": "^0.1.1",
         "sfneal/observables": "^0.1.0"
     },
