@@ -16,3 +16,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.2.1 - 2020-09-14
 - fix issues using with laravel 8
+
+
+## 0.2.2 - 2020-09-14
+- fix composer requirements to be less strict
