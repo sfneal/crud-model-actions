@@ -20,3 +20,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.2.2 - 2020-09-14
 - fix composer requirements to be less strict
+
+
+## 0.3.0 - 2020-10-06
+- add support for php 7.0 & 7.1
