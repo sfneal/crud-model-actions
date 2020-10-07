@@ -28,3 +28,4 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.3.1 - 2020-10-07
 - fix laravel/framework version requirement
+- bump sfneal/models version requirement
