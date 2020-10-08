@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^7.0",
+        "php": ">=7.0",
         "laravel/framework": ">=5.0",
         "sfneal/actions": ">=0.1.2",
         "sfneal/js-response-helpers": ">=0.1.0",
