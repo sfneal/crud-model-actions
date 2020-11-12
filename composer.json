@@ -1,6 +1,6 @@
 {
     "name": "sfneal/crud-model-actions",
-    "description": "Boilerplate for PHP package repo's",
+    "description": "Abstraction layers for creating CRUD Action classes to execute actions on Eloquent Models.",
     "keywords": [
         "sfneal",
         "crud-model-actions"
