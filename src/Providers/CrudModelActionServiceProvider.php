@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Providers;
-
 
 use Illuminate\Support\ServiceProvider;
 

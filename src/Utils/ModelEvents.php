@@ -65,15 +65,16 @@ trait ModelEvents
     }
 
     /**
-     * Set the $trackingEvent the default provided by the config file if null
+     * Set the $trackingEvent the default provided by the config file if null.
      *
      * @return bool
      */
     private function setTrackingEventFromConfig(): bool
     {
         // Set the $trackingEvent using the config
-        if (!isset($this->trackingEvent)) {
+        if (! isset($this->trackingEvent)) {
             $this->trackingEvent = config('crud-model-actions.event');
+
             return true;
         }
 
