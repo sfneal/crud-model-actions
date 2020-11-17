@@ -9,6 +9,6 @@ class CrudModelActionServiceProvider extends ServiceProvider
     public function register()
     {
         // Load config file
-        $this->mergeConfigFrom(__DIR__.'/../config/crud-model-action.php', 'crud-model-action');
+        $this->mergeConfigFrom(__DIR__.'/../../config/crud-model-action.php', 'crud-model-action');
     }
 }

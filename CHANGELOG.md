@@ -37,3 +37,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.5.0 - 2020-11-17
 - add config file with TrackingEvent settings
+
+
+## 0.5.1 - 2020-11-17
+- fix config file path in ServiceProvider
