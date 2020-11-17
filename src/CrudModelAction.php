@@ -40,6 +40,7 @@ abstract class CrudModelAction extends AbstractAction
         $this->request = $request;
         $this->model = $this->resolveModel($model);
         $this->related_model_key = $related_model_key;
+        $this->setTrackingEventFromConfig();
     }
 
     /**
