@@ -33,3 +33,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.4.0 - 2020-10-08
 - add support for php8
+
+
+## 0.5.0 - 2020-11-17
+- add config file with TrackingEvent settings
