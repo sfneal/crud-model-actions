@@ -17,6 +17,14 @@ composer require sfneal/crud-model-actions
 
 ## Usage
 
+Use Action classes extended from CrudModelAction to execute CRUD actions on Eloquent Models.
+
+In order to set a default TrackingEvent to be fired upon successful execution, publish the ServiceProvider & specify an Event.
+ 
+``` php
+php artisan vendor:publish --provider="Sfneal\CrudModelActions\Providers\CrudModelActionsServiceProvider"
+```
+
 ``` php
 // Usage description here
 ```
