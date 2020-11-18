@@ -6,14 +6,24 @@ use Illuminate\Support\ServiceProvider;
 
 class CrudModelActionServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap any CrudModelAction services.
+     *
+     * @return void
+     */
     public function boot()
     {
         // Publish config file
         $this->publishes([
-            __DIR__.'/../../config/crud-model-action.php' => base_path('config/crud-model-action.php'),
+            __DIR__.'/../../config/crud-model-action.php' => config_path('crud-model-action.php'),
         ], 'config');
     }
 
+    /**
+     * Register any CrudModelAction services.
+     *
+     * @return void
+     */
     public function register()
     {
         // Load config file

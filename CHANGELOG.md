@@ -45,3 +45,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.5.2 - 2020-11-18
 - add boot method to ServiceProvider to fix resource publishing
+
+
+## 0.5.3 - 2020-11-18
+- fix ServiceProvider config path
