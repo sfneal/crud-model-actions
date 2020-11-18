@@ -22,7 +22,7 @@ Use Action classes extended from CrudModelAction to execute CRUD actions on Eloq
 In order to set a default TrackingEvent to be fired upon successful execution, publish the ServiceProvider & specify an Event.
  
 ``` php
-php artisan vendor:publish --provider="Sfneal\CrudModelActions\Providers\CrudModelActionsServiceProvider"
+php artisan vendor:publish --provider="Sfneal\CrudModelActions\Providers\CrudModelActionServiceProvider"
 ```
 
 ``` php
