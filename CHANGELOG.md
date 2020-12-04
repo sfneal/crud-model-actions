@@ -53,3 +53,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.5.4 - 2020-12-01
 - fix min phpunit version
+
+
+## 0.5.5 - 2020-12-04
+- fix Travis CI config by disabling xdebug 3
