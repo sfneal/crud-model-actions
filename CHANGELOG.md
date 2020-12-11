@@ -57,3 +57,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.5.5 - 2020-12-04
 - fix Travis CI config by disabling xdebug 3
+
+
+## 0.6.0 - 2020-12-11
+- add support for php8
