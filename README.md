@@ -1,7 +1,8 @@
 # CRUD Model Actions
 
+[![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/crud-model-actions)](https://packagist.org/packages/sfneal/crud-model-actions)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/crud-model-actions.svg?style=flat-square)](https://packagist.org/packages/sfneal/crud-model-actions)
-[![Build Status](https://img.shields.io/travis/sfneal/crud-model-actions/master.svg?style=flat-square)](https://travis-ci.org/sfneal/crud-model-actions)
+[![Build Status](https://travis-ci.com/sfneal/crud-model-actions.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/crud-model-actions)
 [![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/crud-model-actions.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/crud-model-actions)
 [![Total Downloads](https://img.shields.io/packagist/dt/sfneal/crud-model-actions.svg?style=flat-square)](https://packagist.org/packages/sfneal/crud-model-actions)
 
