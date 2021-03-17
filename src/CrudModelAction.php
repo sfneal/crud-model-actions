@@ -12,6 +12,7 @@ use Sfneal\CrudModelActions\Utils\HttpResponses;
 use Sfneal\CrudModelActions\Utils\ModelEvents;
 use Sfneal\CrudModelActions\Utils\ModelQueries;
 use Sfneal\CrudModelActions\Utils\ResponseMessages;
+use Sfneal\Helpers\Laravel\AppInfo;
 
 abstract class CrudModelAction extends AbstractAction
 {
@@ -87,7 +88,7 @@ abstract class CrudModelAction extends AbstractAction
         catch (Exception $exception) {
 
             // Throw errors in dev
-            if (isDevelopmentEnvironment()) {
+            if (AppInfo::isEnvDevelopment()) {
                 throw $exception;
             }
 
