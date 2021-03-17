@@ -61,3 +61,8 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.6.0 - 2020-12-11
 - add support for php8
+
+
+## 0.7.0 - 2020-03-17
+- bump min sfneal/laravel-helpers version to 2.0
+- fix use of `isEnvironmentDevelopment()` to `AppInfo::isEnvDevelopment()`
