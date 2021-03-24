@@ -84,7 +84,7 @@ trait ResponseMessages
      * @return string
      */
     protected function failMessage(): string
-    {;
+    {
         return "Error! Unable to save or update the {$this->getModelShortName()}.";
     }
 
