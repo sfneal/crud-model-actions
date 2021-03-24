@@ -2,7 +2,7 @@
 
 namespace Sfneal\CrudModelActions\Utils;
 
-use Sfneal\Helpers\Laravel\LaravelHelpers;
+use Sfneal\Models\Actions\ResolveModelName;
 
 trait ResponseMessages
 {
