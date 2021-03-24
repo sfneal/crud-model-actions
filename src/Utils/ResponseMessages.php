@@ -2,6 +2,8 @@
 
 namespace Sfneal\CrudModelActions\Utils;
 
+use Sfneal\Models\Actions\ResolveModelName;
+
 trait ResponseMessages
 {
     /**
@@ -51,6 +53,7 @@ trait ResponseMessages
      */
     protected function successNoun(string $noun = null): string
     {
+        // todo: add spaces to CamelCase $nouns
         // Set the success noun if passed
         if (isset($noun)) {
             $this->successNoun = $noun;
@@ -82,9 +85,7 @@ trait ResponseMessages
      */
     protected function failMessage(): string
     {
-        $model = strtolower($this->getModelShortName());
-
-        return "Error! Unable to save or update the {$model}.";
+        return "Error! Unable to save or update the {$this->getModelShortName()}.";
     }
 
     /**
@@ -94,6 +95,6 @@ trait ResponseMessages
      */
     private function getModelShortName(): string
     {
-        return getClassName($this->model, true, $this->model->getTable());
+        return (new ResolveModelName($this->model, true))->execute();
     }
 }
