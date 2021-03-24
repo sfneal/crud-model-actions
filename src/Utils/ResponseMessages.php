@@ -2,6 +2,8 @@
 
 namespace Sfneal\CrudModelActions\Utils;
 
+use Sfneal\Helpers\Laravel\LaravelHelpers;
+
 trait ResponseMessages
 {
     /**
@@ -95,6 +97,25 @@ trait ResponseMessages
      */
     private function getModelShortName(): string
     {
-        return getClassName($this->model, true, $this->model->getTable());
+        // Convert table name to a CamelCase string for consistency with Model names
+        $tableCamelCase = implode(
+            '',
+            array_map(
+                function (string $piece) {
+                    return ucfirst($piece);
+                },
+                explode('_', $this->model->getTable())
+            )
+        );
+
+        // Get the $shortName from the Model's class name or the table name
+        $shortName = LaravelHelpers::getClassName(
+            $this->model,
+            true,
+            $tableCamelCase
+        );
+
+        // Split string on upper case characters
+        return implode(' ', preg_split('/(?=[A-Z])/', $shortName, -1, PREG_SPLIT_NO_EMPTY));
     }
 }
