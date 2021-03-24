@@ -84,10 +84,8 @@ trait ResponseMessages
      * @return string
      */
     protected function failMessage(): string
-    {
-        $model = strtolower($this->getModelShortName());
-
-        return "Error! Unable to save or update the {$model}.";
+    {;
+        return "Error! Unable to save or update the {$this->getModelShortName()}.";
     }
 
     /**
@@ -97,25 +95,6 @@ trait ResponseMessages
      */
     private function getModelShortName(): string
     {
-        // Convert table name to a CamelCase string for consistency with Model names
-        $tableCamelCase = implode(
-            '',
-            array_map(
-                function (string $piece) {
-                    return ucfirst($piece);
-                },
-                explode('_', $this->model->getTable())
-            )
-        );
-
-        // Get the $shortName from the Model's class name or the table name
-        $shortName = LaravelHelpers::getClassName(
-            $this->model,
-            true,
-            $tableCamelCase
-        );
-
-        // Split string on upper case characters
-        return implode(' ', preg_split('/(?=[A-Z])/', $shortName, -1, PREG_SPLIT_NO_EMPTY));
+        return (new ResolveModelName($this->model, true))->execute();
     }
 }
