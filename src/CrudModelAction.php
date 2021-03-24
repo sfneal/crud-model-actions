@@ -17,6 +17,7 @@ use Sfneal\Helpers\Laravel\AppInfo;
 abstract class CrudModelAction extends AbstractAction
 {
     // todo: artisan command to create new CrudModelAction?
+    // todo: change model type hinting to AbstractModel
 
     use HandleModel,
         HttpResponses,
