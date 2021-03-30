@@ -63,14 +63,19 @@ All notable changes to `crud-model-actions` will be documented in this file
 - add support for php8
 
 
-## 0.7.0 - 2020-03-17
+## 0.7.0 - 2021-03-17
 - cut support for php7.2 & below
 - bump min sfneal/laravel-helpers version to 2.0
 - fix use of `isEnvironmentDevelopment()` to `AppInfo::isEnvDevelopment()`
 - bump sfneal/actions, sfneal/js-response-helpers & sfneal/models package min version to 1.0
 
 
-## 0.8.0 - 2020-03-24
+## 0.8.0 - 2021-03-24
 - refactor `getModelShortName()` so that a properly spaced string is returned
 - bump sfneal/models min version to 1.3 to support use of `ResolveModelName` action
 - make ResolveModelName action for retrieving a Model's short name for use in logging & message flashes
+
+
+## 0.8.1 - 2021-03-30
+- fix sfneal packages version syntax
+- fix Travis CI config to enable code coverage uploads
