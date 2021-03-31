@@ -6,7 +6,7 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Sfneal\Actions\AbstractAction;
+use Sfneal\Actions\Action;
 use Sfneal\CrudModelActions\Utils\HandleModel;
 use Sfneal\CrudModelActions\Utils\HttpResponses;
 use Sfneal\CrudModelActions\Utils\ModelEvents;
@@ -14,7 +14,7 @@ use Sfneal\CrudModelActions\Utils\ModelQueries;
 use Sfneal\CrudModelActions\Utils\ResponseMessages;
 use Sfneal\Helpers\Laravel\AppInfo;
 
-abstract class CrudModelAction extends AbstractAction
+abstract class CrudModelAction extends Action
 {
     // todo: artisan command to create new CrudModelAction?
     // todo: change model type hinting to AbstractModel
@@ -51,7 +51,7 @@ abstract class CrudModelAction extends AbstractAction
      * @return Response
      * @throws Exception
      */
-    public function execute()
+    public function execute(): Response
     {
         // Attempt to pass validation check
         // & execute CRUD action on $model

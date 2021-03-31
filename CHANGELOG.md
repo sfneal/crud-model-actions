@@ -79,3 +79,8 @@ All notable changes to `crud-model-actions` will be documented in this file
 ## 0.8.1 - 2021-03-30
 - fix sfneal packages version syntax
 - fix Travis CI config to enable code coverage uploads
+
+
+## 0.9.0 - 2021-03-31
+- bump min sfneal/actions version to 2.0
+- fix return type hinting in `CrudModelAction::execute()` method
