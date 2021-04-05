@@ -84,3 +84,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 ## 0.9.0 - 2021-03-31
 - bump min sfneal/actions version to 2.0
 - fix return type hinting in `CrudModelAction::execute()` method
+
+
+## 0.10.0 - 2021-04-05
+- bump sfneal/observables min version to ^1.0
