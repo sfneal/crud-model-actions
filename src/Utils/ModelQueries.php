@@ -5,19 +5,19 @@ namespace Sfneal\CrudModelActions\Utils;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Sfneal\Builders\QueryBuilder;
-use Sfneal\Models\AbstractModel;
+use Sfneal\Models\Model;
 
 trait ModelQueries
 {
     /**
-     * @var AbstractModel|EloquentModel
+     * @var Model|EloquentModel
      */
     protected $model;
 
     /**
      * The Eloquent Model class.
      *
-     * @var AbstractModel|EloquentModel
+     * @var Model|EloquentModel
      */
     protected $modelClass;
 
