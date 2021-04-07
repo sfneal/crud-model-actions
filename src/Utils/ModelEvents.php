@@ -2,7 +2,7 @@
 
 namespace Sfneal\CrudModelActions\Utils;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Sfneal\Events\Event;
 use Sfneal\Models\AbstractModel;
 
@@ -14,7 +14,7 @@ trait ModelEvents
     protected $trackingEvent;
 
     /**
-     * @var AbstractModel|Model
+     * @var AbstractModel|EloquentModel
      */
     private $trackingEventModel;
 
@@ -42,10 +42,10 @@ trait ModelEvents
      *  - optionally set a the $trackingEventModel property
      *  - useful for using a different model in the trackingEvent than the resolved/saved model
      *
-     * @param Model|null $model
-     * @return AbstractModel|Model
+     * @param EloquentModel|null $model
+     * @return AbstractModel|EloquentModel
      */
-    protected function trackingEventModel(Model $model = null): Model
+    protected function trackingEventModel(EloquentModel $model = null): EloquentModel
     {
         if (isset($model)) {
             $this->trackingEventModel = $model;

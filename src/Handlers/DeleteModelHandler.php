@@ -3,17 +3,17 @@
 namespace Sfneal\CrudModelActions\Handlers;
 
 use Exception;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 
 trait DeleteModelHandler
 {
     /**
      * Save or update the Model.
      *
-     * @return Model
+     * @return EloquentModel
      * @throws Exception
      */
-    protected function handle(): Model
+    protected function handle(): EloquentModel
     {
         // Delete the Model
         $this->model->delete();

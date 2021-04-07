@@ -3,7 +3,7 @@
 namespace Sfneal\CrudModelActions;
 
 use Exception;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Sfneal\Actions\Action;
@@ -34,7 +34,7 @@ abstract class CrudModelAction extends Action
      * BaseSaveModelAction constructor.
      *
      * @param Request $request
-     * @param int|Model|null $model
+     * @param int|EloquentModel|null $model
      * @param int|null $related_model_key
      */
     public function __construct(Request $request, $model = null, $related_model_key = null)

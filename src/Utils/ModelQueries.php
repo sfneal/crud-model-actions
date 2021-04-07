@@ -3,21 +3,21 @@
 namespace Sfneal\CrudModelActions\Utils;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Sfneal\Builders\QueryBuilder;
 use Sfneal\Models\AbstractModel;
 
 trait ModelQueries
 {
     /**
-     * @var AbstractModel|Model
+     * @var AbstractModel|EloquentModel
      */
     protected $model;
 
     /**
      * The Eloquent Model class.
      *
-     * @var AbstractModel|Model
+     * @var AbstractModel|EloquentModel
      */
     protected $modelClass;
 
@@ -37,8 +37,8 @@ trait ModelQueries
      *  - if an integer model_key value is passed, find the model
      *  - if a model instance is passed, declare the model
      *
-     * @param int|Model|null $model
-     * @return Model|null
+     * @param int|EloquentModel|null $model
+     * @return EloquentModel|null
      */
     private function resolveModel($model)
     {
