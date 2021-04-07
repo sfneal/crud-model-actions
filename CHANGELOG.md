@@ -88,3 +88,8 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.10.0 - 2021-04-05
 - bump sfneal/observables min version to ^1.0
+
+
+## 0.11.0 - 2021-04-05
+- bump sfneal/models to v2.0
+- refactor use of `AbstractModel` to `Model`
