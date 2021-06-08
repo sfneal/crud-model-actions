@@ -22,6 +22,11 @@ trait ResponseMessages
     private $successNoun;
 
     /**
+     * @var string Message to session flash & log after a failed action
+     */
+    private $failMessage;
+
+    /**
      * Response message sent on success.
      *
      * @param string|null $message
@@ -81,11 +86,25 @@ trait ResponseMessages
     /**
      * Response message sent on failure.
      *
+     * @param string|null $message
      * @return string
      */
-    protected function failMessage(): string
+    protected function failMessage(string $message = null): string
     {
-        return "Error! Unable to save or update the {$this->getModelShortName()}.";
+        // Set the message during runtime
+        if (isset($message)) {
+            $this->failMessage = $message;
+        }
+
+        // Return declared fail message
+        if (isset($this->failMessage)) {
+            return $this->failMessage;
+        }
+
+        // Return the default fail message
+        else {
+            return "Error! Unable to save or update the {$this->getModelShortName()}.";
+        }
     }
 
     /**
