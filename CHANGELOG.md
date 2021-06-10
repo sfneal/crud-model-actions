@@ -97,3 +97,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.12.0 - 2021-06-08
 - refactor `failMessage()` method to allow for declaring fail messages during run time
+
+
+## 0.12.1 - 2021-06-10
+- bump sfneal/models min version to v2.3.0 to fix issues with `CrudModelAction` exception throwing
