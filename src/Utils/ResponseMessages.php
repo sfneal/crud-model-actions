@@ -114,6 +114,6 @@ trait ResponseMessages
      */
     private function getModelShortName(): string
     {
-        return (new ResolveModelName($this->model, true))->execute();
+        return (new ResolveModelName($this->model ?? $this->modelClass, true))->execute();
     }
 }

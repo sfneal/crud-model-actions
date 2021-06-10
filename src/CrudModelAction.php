@@ -80,7 +80,7 @@ abstract class CrudModelAction extends Action
             // Validation failed - throw exception
             else {
                 // todo: add exception logging?
-                throw new Exception();
+                throw new Exception($this->failMessage());
             }
         }
 
