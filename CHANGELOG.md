@@ -101,3 +101,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.12.1 - 2021-06-10
 - bump sfneal/models min version to v2.3.0 to fix issues with `CrudModelAction` exception throwing
+
+
+## 0.13.0 - 2021-06-14
+- refactor `CrudModelAction`'s $request param to be nullable for actions that don't require request data

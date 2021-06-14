@@ -33,13 +33,13 @@ abstract class CrudModelAction extends Action
     /**
      * BaseSaveModelAction constructor.
      *
-     * @param Request $request
+     * @param Request|null $request
      * @param int|EloquentModel|null $model
      * @param int|null $related_model_key
      */
-    public function __construct(Request $request, $model = null, $related_model_key = null)
+    public function __construct(Request $request = null, $model = null, int $related_model_key = null)
     {
-        $this->request = $request;
+        $this->request = $request ?? request();
         $this->model = $this->resolveModel($model);
         $this->related_model_key = $related_model_key;
         $this->setTrackingEventFromConfig();
