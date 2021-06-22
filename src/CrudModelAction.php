@@ -18,11 +18,11 @@ abstract class CrudModelAction extends Action
     // todo: artisan command to create new CrudModelAction?
     // todo: change model type hinting to Model
 
-    use HandleModel,
-        HttpResponses,
-        ModelEvents,
-        ModelQueries,
-        ResponseMessages;
+    use HandleModel;
+    use HttpResponses;
+    use ModelEvents;
+    use ModelQueries;
+    use ResponseMessages;
 
     /**
      * @var Request
