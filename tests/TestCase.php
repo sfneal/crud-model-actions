@@ -7,6 +7,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Providers\AddressServiceProvider;
+use Sfneal\CrudModelActions\Providers\CrudModelActionServiceProvider;
 use Sfneal\Testing\Models\People;
 use Sfneal\Testing\Providers\MockModelsServiceProvider;
 
@@ -23,6 +24,7 @@ class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app)
     {
         return [
+            CrudModelActionServiceProvider::class,
             MockModelsServiceProvider::class,
             AddressServiceProvider::class
         ];
