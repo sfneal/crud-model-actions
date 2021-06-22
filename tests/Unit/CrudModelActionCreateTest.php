@@ -35,10 +35,10 @@ class CrudModelActionCreateTest extends TestCase implements RequestCreator
         $response = (new CreatePeopleAction($request))->execute();
 
         $query = People::query()
-            ->where('name_first', '=', 'Victor')
-            ->where('name_last', '=', 'Hedman')
-            ->where('email', '=', 'vhedman@example.com')
-            ->where('age', '=', 29);
+            ->where('name_first', '=', $data['data']['name_first'])
+            ->where('name_last', '=', $data['data']['name_last'])
+            ->where('email', '=', $data['data']['email'])
+            ->where('age', '=', $data['data']['age']);
 
         $this->assertSame(1, $query->count());
 
