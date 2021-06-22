@@ -4,16 +4,16 @@
 namespace Sfneal\CrudModelActions\Tests\Assets\Actions;
 
 
-use Sfneal\Testing\Models\People;
+use Illuminate\Database\Eloquent\Model;
 
 class CreatePeopleAction extends PeopleAction
 {
     /**
      * Save or update the Model.
      *
-     * @return People
+     * @return Model
      */
-    protected function handle(): People
+    protected function handle(): Model
     {
         // Create People model
         $this->model = $this->modelClass::query()->create($this->request->input('data'));

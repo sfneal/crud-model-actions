@@ -4,16 +4,16 @@
 namespace Sfneal\CrudModelActions\Tests\Assets\Actions;
 
 
-use Sfneal\Testing\Models\People;
+use Illuminate\Database\Eloquent\Model;
 
 class ProcessPeopleAction extends PeopleAction
 {
     /**
      * Save or update the Model.
      *
-     * @return People
+     * @return Model
      */
-    protected function handle(): People
+    protected function handle(): Model
     {
         // Update the People model
         $this->model->address()->update($this->request->input('data.address'));
