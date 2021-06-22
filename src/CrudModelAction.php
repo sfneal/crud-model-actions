@@ -12,7 +12,6 @@ use Sfneal\CrudModelActions\Utils\HttpResponses;
 use Sfneal\CrudModelActions\Utils\ModelEvents;
 use Sfneal\CrudModelActions\Utils\ModelQueries;
 use Sfneal\CrudModelActions\Utils\ResponseMessages;
-use Sfneal\Helpers\Laravel\AppInfo;
 
 abstract class CrudModelAction extends Action
 {
