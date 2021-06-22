@@ -45,7 +45,7 @@ class CrudModelActionCreateTest extends CrudModelActionTestCase
      * @test
      * @throws Exception
      */
-    public function model_can_be_created()
+    public function action_can_be_executed()
     {
         $this->executeAction();
 

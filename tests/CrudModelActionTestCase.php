@@ -36,20 +36,6 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
     }
 
     /**
-     * Execute a CrudModelAction.
-     *
-     * @return Response
-     */
-    abstract protected function executeAction(): Response;
-
-    /**
-     * Retrieve an array of data to be added to the mock request.
-     *
-     * @return array
-     */
-    abstract protected function requestData(): array;
-
-    /**
      * @test
      * @throws Exception
      */
@@ -60,6 +46,9 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
 
         Event::assertDispatched(MockTrackingEvent::class);
     }
+
+    /** @test */
+    abstract public function action_can_be_executed();
 
     /**
      * @test
@@ -73,4 +62,18 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
         $this->assertIsString(session('success'));
         $this->assertInstanceOf(Response::class, $response);
     }
+
+    /**
+     * Execute a CrudModelAction.
+     *
+     * @return Response
+     */
+    abstract protected function executeAction(): Response;
+
+    /**
+     * Retrieve an array of data to be added to the mock request.
+     *
+     * @return array
+     */
+    abstract protected function requestData(): array;
 }
