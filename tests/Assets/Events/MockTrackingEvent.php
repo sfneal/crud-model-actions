@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Tests\Assets\Events;
-
 
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Events\Event;
