@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Tests\Unit;
-
 
 use Exception;
 use Illuminate\Http\Response;
@@ -24,7 +22,6 @@ class CrudModelActionUpdateTest extends CrudModelActionTestCase
 
         $this->modelId = (new RandomModelAttributeQuery(People::class, People::getPrimaryKeyName()))->execute();
     }
-
 
     /**
      * @test
@@ -63,7 +60,7 @@ class CrudModelActionUpdateTest extends CrudModelActionTestCase
                 'name_last' => 'Stamkos',
                 'email' => 'sstamkos@example.com',
                 'age' => 31,
-            ]
+            ],
         ];
     }
 }
