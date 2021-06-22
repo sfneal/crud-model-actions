@@ -5,7 +5,6 @@ namespace Sfneal\CrudModelActions\Tests\Feature;
 use Illuminate\Support\Facades\Config;
 use Sfneal\CrudModelActions\Tests\Assets\Events\MockTrackingEvent;
 use Sfneal\CrudModelActions\Tests\TestCase;
-use Sfneal\Events\Event;
 
 class ConfigTest extends TestCase
 {

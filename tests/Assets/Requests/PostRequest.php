@@ -5,7 +5,6 @@ namespace Sfneal\CrudModelActions\Tests\Assets\Requests;
 
 
 use Illuminate\Http\Request;
-use Sfneal\Testing\Utils\Interfaces\RequestCreator;
 
 trait PostRequest
 {

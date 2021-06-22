@@ -4,7 +4,6 @@
 namespace Sfneal\CrudModelActions\Tests\Assets\Actions;
 
 
-use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Sfneal\Testing\Models\People;
 
 class CreatePeopleAction extends PeopleAction
