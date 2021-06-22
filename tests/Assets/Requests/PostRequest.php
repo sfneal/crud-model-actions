@@ -1,14 +1,11 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Tests\Assets\Requests;
-
 
 use Illuminate\Http\Request;
 
 trait PostRequest
 {
-
     /**
      * Create a Request to be used in test methods.
      *

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Tests\Unit;
-
 
 use Exception;
 use Illuminate\Http\Response;
@@ -36,7 +34,7 @@ class CrudModelActionCreateTest extends CrudModelActionTestCase
                 'name_last' => 'Hedman',
                 'email' => 'vhedman@example.com',
                 'age' => 29,
-            ]
+            ],
         ];
     }
 

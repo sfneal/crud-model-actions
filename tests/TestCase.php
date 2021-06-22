@@ -26,7 +26,7 @@ class TestCase extends OrchestraTestCase
         return [
             CrudModelActionServiceProvider::class,
             MockModelsServiceProvider::class,
-            AddressServiceProvider::class
+            AddressServiceProvider::class,
         ];
     }
 
