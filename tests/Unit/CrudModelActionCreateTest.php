@@ -5,7 +5,6 @@ namespace Sfneal\CrudModelActions\Tests\Unit;
 
 
 use Exception;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Response;
 use Sfneal\CrudModelActions\Tests\Assets\Actions\CreatePeopleAction;
 use Sfneal\CrudModelActions\Tests\CrudModelActionTestCase;
@@ -55,16 +54,6 @@ class CrudModelActionCreateTest extends CrudModelActionTestCase
             ->where('email', '=', $this->request->input('data.email'))
             ->where('age', '=', $this->request->input('data.age'));
 
-        $this->assertSame(1, $query->count());
-
-        $model = $query->get()->first();
-
-        $this->assertTrue($query->exists());
-        $this->assertInstanceOf(Model::class, $model);
-        $this->assertInstanceOf(People::class, $model);
-
-        foreach ($this->request->input('data') as $key => $attribute) {
-            $this->assertEquals($attribute, $model->{$key});
-        }
+        $this->queryAssertions($query);
     }
 }

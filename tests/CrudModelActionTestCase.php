@@ -5,11 +5,13 @@ namespace Sfneal\CrudModelActions\Tests;
 
 
 use Exception;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Event;
 use Sfneal\CrudModelActions\Tests\Assets\Events\MockTrackingEvent;
 use Sfneal\CrudModelActions\Tests\Assets\Requests\PostRequest;
+use Sfneal\Testing\Models\People;
 use Sfneal\Testing\Utils\Interfaces\RequestCreator;
 use Sfneal\Testing\Utils\Traits\EventFaker;
 
@@ -22,6 +24,11 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
      * @var Request
      */
     protected $request;
+
+    /**
+     * @var Model|null
+     */
+    protected $model;
 
     /**
      * Setup the test environment.
@@ -76,4 +83,24 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
      * @return array
      */
     abstract protected function requestData(): array;
+
+    /**
+     * Execute query assertions.
+     *
+     * @param $query
+     */
+    protected function queryAssertions($query): void
+    {
+        $this->assertSame(1, $query->count());
+
+        $model = $query->get()->first();
+
+        $this->assertTrue($query->exists());
+        $this->assertInstanceOf(Model::class, $model);
+        $this->assertInstanceOf(People::class, $model);
+
+        foreach ($this->request->input('data') as $key => $attribute) {
+            $this->assertEquals($attribute, $model->{$key});
+        }
+    }
 }
