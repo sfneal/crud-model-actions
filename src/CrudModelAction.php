@@ -88,16 +88,16 @@ abstract class CrudModelAction extends Action
         // CRUD action failed to execute
         catch (Exception $exception) {
 
-            // Throw errors in dev
-            if (AppInfo::isEnvDevelopment()) {
-                throw $exception;
-            }
-
             // Flash a success message
             session()->flash('fail', $this->failMessage());
 
-            // Return failure response
-            return response($this->failResponse(), 200);
+            // Return failure response if the interface is implemented
+            if (method_exists($this, 'failResponse')) {
+                return response($this->failResponse(), 500);
+            }
+
+            // Throw exception
+            throw $exception;
         }
     }
 }

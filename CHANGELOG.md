@@ -105,3 +105,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.13.0 - 2021-06-14
 - refactor `CrudModelAction`'s $request param to be nullable for actions that don't require request data
+
+
+## 0.14.0 - 2021-06-22
+- fix `CrudModelAction` to throw exceptions when actions fail in dev & prod environments
