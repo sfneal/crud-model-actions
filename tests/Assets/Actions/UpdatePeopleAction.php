@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Tests\Assets\Actions;
-
 
 use Illuminate\Database\Eloquent\Model;
 
