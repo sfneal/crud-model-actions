@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\CrudModelActions\Tests\Unit;
-
 
 use Exception;
 use Illuminate\Http\Response;
@@ -65,8 +63,8 @@ class CrudModelActionProcessTest extends CrudModelActionTestCase
                     'city' => 'Boston',
                     'state' => 'MA',
                     'zip' => '12345',
-                ]
-            ]
+                ],
+            ],
         ];
     }
 }
