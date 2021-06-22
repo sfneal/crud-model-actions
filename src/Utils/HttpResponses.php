@@ -25,15 +25,4 @@ trait HttpResponses
         // Redirect back to previous page
         return $this->successResponse ?? redirect()->back();
     }
-
-    /**
-     * Return the default error response.
-     *
-     * @return string
-     */
-    protected function failResponse(): string
-    {
-        // Return JS alert
-        return jsAlert($this->failMessage());
-    }
 }
