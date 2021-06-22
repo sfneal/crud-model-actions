@@ -26,9 +26,9 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
     protected $request;
 
     /**
-     * @var Model|null
+     * @var int|null
      */
-    protected $model;
+    protected $modelId;
 
     /**
      * Setup the test environment.
@@ -87,15 +87,10 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
     /**
      * Execute query assertions.
      *
-     * @param $query
+     * @param $model
      */
-    protected function queryAssertions($query): void
+    protected function queryAssertions($model): void
     {
-        $this->assertSame(1, $query->count());
-
-        $model = $query->get()->first();
-
-        $this->assertTrue($query->exists());
         $this->assertInstanceOf(Model::class, $model);
         $this->assertInstanceOf(People::class, $model);
 

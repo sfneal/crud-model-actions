@@ -54,6 +54,8 @@ class CrudModelActionCreateTest extends CrudModelActionTestCase
             ->where('email', '=', $this->request->input('data.email'))
             ->where('age', '=', $this->request->input('data.age'));
 
-        $this->queryAssertions($query);
+        $this->assertSame(1, $query->count());
+        $this->assertTrue($query->exists());
+        $this->queryAssertions($query->get()->first());
     }
 }
