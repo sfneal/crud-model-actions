@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Sfneal\Actions\Action;
-use Sfneal\CrudModelActions\Utils\HandleModel;
 use Sfneal\CrudModelActions\Utils\HttpResponses;
 use Sfneal\CrudModelActions\Utils\ModelEvents;
 use Sfneal\CrudModelActions\Utils\ModelQueries;
@@ -18,7 +17,6 @@ abstract class CrudModelAction extends Action
     // todo: artisan command to create new CrudModelAction?
     // todo: change model type hinting to Model
 
-    use HandleModel;
     use HttpResponses;
     use ModelEvents;
     use ModelQueries;
@@ -52,8 +50,7 @@ abstract class CrudModelAction extends Action
      */
     public function execute(): Response
     {
-        // Attempt to pass validation check
-        // & execute CRUD action on $model
+        // Attempt to pass validation check & execute CRUD action on $model
         try {
 
             // Model passes validation checks
@@ -83,8 +80,7 @@ abstract class CrudModelAction extends Action
             }
         }
 
-        // Validation checks failed or model
-        // CRUD action failed to execute
+        // Validation checks failed or model CRUD action failed to execute
         catch (Exception $exception) {
 
             // Flash a success message
@@ -99,4 +95,11 @@ abstract class CrudModelAction extends Action
             throw $exception;
         }
     }
+
+    /**
+     * Save or update the Model.
+     *
+     * @return EloquentModel
+     */
+    abstract protected function handle(): EloquentModel;
 }
