@@ -112,6 +112,7 @@ All notable changes to `crud-model-actions` will be documented in this file
 - cut sfneal/js-response-helpers & sfneal/laravel-helpers from composer dependencies
 
  
-## 0.14.1 - 2021-08-18
+## 0.15.0 - 2021-08-18
+- start adding test suite
 - fix issue with missing sfneal/address composer requirement that was previously a dependency of sfneal/models
 - add sfneal/address to composer dependencies
