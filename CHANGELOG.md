@@ -110,3 +110,8 @@ All notable changes to `crud-model-actions` will be documented in this file
 ## 0.14.0 - 2021-06-22
 - fix `CrudModelAction` to throw exceptions when actions fail in dev & prod environments
 - cut sfneal/js-response-helpers & sfneal/laravel-helpers from composer dependencies
+
+ 
+## 0.14.1 - 2021-08-18
+- fix issue with missing sfneal/address composer requirement that was previously a dependency of sfneal/models
+- add sfneal/address to composer dependencies
