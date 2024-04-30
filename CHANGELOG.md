@@ -124,4 +124,5 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 
 ## 0.17.0 - 2024-04-30
+- cut support for PHP 7.3 & 7.4
 - add support for PHP 8.1, 8.2 & 8.3
