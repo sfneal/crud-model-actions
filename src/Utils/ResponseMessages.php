@@ -29,7 +29,7 @@ trait ResponseMessages
     /**
      * Response message sent on success.
      *
-     * @param string|null $message
+     * @param  string|null  $message
      * @return string
      */
     protected function successMessage(string $message = null): string
@@ -53,7 +53,7 @@ trait ResponseMessages
     /**
      * Retrieve the 'noun' to be used as the object of the success message.
      *
-     * @param string|null $noun
+     * @param  string|null  $noun
      * @return string
      */
     protected function successNoun(string $noun = null): string
@@ -72,7 +72,7 @@ trait ResponseMessages
     /**
      * Action verb to be used in to the success message.
      *
-     * @param string|null $verb
+     * @param  string|null  $verb
      * @return string
      */
     protected function successActionVerb(string $verb = null): string
@@ -87,7 +87,7 @@ trait ResponseMessages
     /**
      * Response message sent on failure.
      *
-     * @param string|null $message
+     * @param  string|null  $message
      * @return string
      */
     protected function failMessage(string $message = null): string

@@ -26,6 +26,7 @@ class CrudModelActionProcessTest extends CrudModelActionTestCase
 
     /**
      * @test
+     *
      * @throws Exception
      */
     public function action_can_be_executed()
@@ -41,6 +42,7 @@ class CrudModelActionProcessTest extends CrudModelActionTestCase
      * Execute a CrudModelAction.
      *
      * @return Response
+     *
      * @throws Exception
      */
     protected function executeAction(): Response
