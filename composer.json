@@ -19,7 +19,7 @@
         "php": ">=7.3",
         "laravel/framework": "^8.75|^9.0|^10.0|^11.0",
         "sfneal/actions": "^2.0",
-        "sfneal/address": "^1.2",
+        "sfneal/address": "^1.2 || ^2.0",
         "sfneal/models": "^2.3",
         "sfneal/observables": "^1.0"
     },
