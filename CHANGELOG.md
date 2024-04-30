@@ -116,7 +116,3 @@ All notable changes to `crud-model-actions` will be documented in this file
 - start adding test suite
 - fix issue with missing sfneal/address composer requirement that was previously a dependency of sfneal/models
 - add sfneal/address to composer dependencies
-
-
-## 0.16.0 - 2024-04-30
-- add new GitHub actions
