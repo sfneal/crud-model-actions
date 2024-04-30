@@ -6,4 +6,7 @@ use Sfneal\CrudModelActions\Tests\TestCase;
 
 class CrudValidatorTest extends TestCase
 {
+    public function test_not_added() {
+        $this->markTestIncomplete();
+    }
 }
