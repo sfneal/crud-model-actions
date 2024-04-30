@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+    crud-model-actions:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: "stephenneal/crud-model-actions:latest"
+        env_file: .env.docker
+        container_name: crud-model-actions
+        tty: true
+        volumes:
+            - crud-model-actions:/var/www
+        depends_on:
+            - crud-model-actions-cache
+        networks:
+            - crud-model-actions-network
+
+    crud-model-actions-cache:
+        container_name: crud-model-actions-cache
+        image: redis:7-alpine
+        command: ["redis-server", "--appendonly yes", "--port 9736"]
+        ports:
+            - "9736:9736"
+        volumes:
+            - crud-model-actions-cache:/data
+        networks:
+            - crud-model-actions-network
+
+
+# Networks
+networks:
+    crud-model-actions-network:
+        driver: bridge
+
+# Volumes
+volumes:
+    crud-model-actions:
+    crud-model-actions-cache:
