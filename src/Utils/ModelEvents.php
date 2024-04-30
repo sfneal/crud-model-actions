@@ -42,7 +42,7 @@ trait ModelEvents
      *  - optionally set a the $trackingEventModel property
      *  - useful for using a different model in the trackingEvent than the resolved/saved model
      *
-     * @param EloquentModel|null $model
+     * @param  EloquentModel|null  $model
      * @return Model|EloquentModel
      */
     protected function trackingEventModel(EloquentModel $model = null): EloquentModel

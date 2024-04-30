@@ -25,6 +25,7 @@ class CrudModelActionDeleteTest extends CrudModelActionTestCase
 
     /**
      * @test
+     *
      * @throws Exception
      */
     public function action_can_be_executed()
@@ -40,6 +41,7 @@ class CrudModelActionDeleteTest extends CrudModelActionTestCase
      * Execute a CrudModelAction.
      *
      * @return Response
+     *
      * @throws Exception
      */
     protected function executeAction(): Response

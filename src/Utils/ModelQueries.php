@@ -37,7 +37,7 @@ trait ModelQueries
      *  - if an integer model_key value is passed, find the model
      *  - if a model instance is passed, declare the model
      *
-     * @param int|EloquentModel|null $model
+     * @param  int|EloquentModel|null  $model
      * @return EloquentModel|null
      */
     private function resolveModel($model)
