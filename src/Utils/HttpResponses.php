@@ -12,7 +12,7 @@ trait HttpResponses
     /**
      * Return the default success response.
      *
-     * @param string|null $response
+     * @param  string|null  $response
      * @return string
      */
     protected function successResponse(string $response = null): string

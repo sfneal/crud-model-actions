@@ -30,9 +30,9 @@ abstract class CrudModelAction extends Action
     /**
      * BaseSaveModelAction constructor.
      *
-     * @param Request|null $request
-     * @param int|EloquentModel|null $model
-     * @param int|null $related_model_key
+     * @param  Request|null  $request
+     * @param  int|EloquentModel|null  $model
+     * @param  int|null  $related_model_key
      */
     public function __construct(Request $request = null, $model = null, int $related_model_key = null)
     {
@@ -46,13 +46,13 @@ abstract class CrudModelAction extends Action
      * Create or update the Model.
      *
      * @return Response
+     *
      * @throws Exception
      */
     public function execute(): Response
     {
         // Attempt to pass validation check & execute CRUD action on $model
         try {
-
             // Model passes validation checks
             if (
                 (method_exists($this, 'validate') && $this->validate())
@@ -82,7 +82,6 @@ abstract class CrudModelAction extends Action
 
         // Validation checks failed or model CRUD action failed to execute
         catch (Exception $exception) {
-
             // Flash a success message
             session()->flash('fail', $this->failMessage());
 

@@ -11,6 +11,7 @@ trait DeleteModelHandler
      * Save or update the Model.
      *
      * @return EloquentModel
+     *
      * @throws Exception
      */
     protected function handle(): EloquentModel

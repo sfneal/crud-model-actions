@@ -9,12 +9,12 @@ trait PostRequest
     /**
      * Create a Request to be used in test methods.
      *
-     * @param array $headers
-     * @param array $parameters
-     * @param array $cookies
-     * @param array $files
-     * @param array $server
-     * @param null $content
+     * @param  array  $headers
+     * @param  array  $parameters
+     * @param  array  $cookies
+     * @param  array  $files
+     * @param  array  $server
+     * @param  null  $content
      * @return Request
      */
     public function createRequest(array $headers = [],

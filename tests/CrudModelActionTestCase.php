@@ -42,6 +42,7 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
 
     /**
      * @test
+     *
      * @throws Exception
      */
     public function action_fires_event()
@@ -57,6 +58,7 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
 
     /**
      * @test
+     *
      * @throws Exception
      */
     public function action_return_response()
@@ -85,9 +87,9 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
     /**
      * Execute query assertions.
      *
-     * @param $model
-     * @param string|null $expectedModel
-     * @param string $inputKey
+     * @param  $model
+     * @param  string|null  $expectedModel
+     * @param  string  $inputKey
      */
     protected function queryAssertions($model, string $expectedModel = null, string $inputKey = 'data'): void
     {
