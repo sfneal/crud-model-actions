@@ -6,7 +6,6 @@ services:
             context: .
             dockerfile: Dockerfile
         image: "stephenneal/crud-model-actions:latest"
-        env_file: .env.docker
         container_name: crud-model-actions
         tty: true
         volumes:
