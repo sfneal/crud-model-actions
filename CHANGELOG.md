@@ -120,3 +120,4 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.16.0 - 2024-04-30
 - add new GitHub actions
+- fix dependency constraints
