@@ -130,3 +130,4 @@ All notable changes to `crud-model-actions` will be documented in this file
 
 ## 0.17.1 - 2024-05-06
 - bump sfneal/models version constraint
+- bump sfneal/address version constraint
