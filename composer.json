@@ -20,7 +20,7 @@
         "laravel/framework": "^8.75|^9.0|^10.0|^11.0",
         "sfneal/actions": "^2.0",
         "sfneal/address": "^1.2 || ^2.0",
-        "sfneal/models": "^2.3 || ^3.0",
+        "sfneal/models": "^2.3 || ^3.0 || ^4.0",
         "sfneal/observables": "^1.0"
     },
     "require-dev": {
