@@ -45,7 +45,7 @@ trait ModelEvents
      * @param  EloquentModel|null  $model
      * @return Model|EloquentModel
      */
-    protected function trackingEventModel(EloquentModel $model = null): EloquentModel
+    protected function trackingEventModel(?EloquentModel $model = null): EloquentModel
     {
         if (isset($model)) {
             $this->trackingEventModel = $model;
