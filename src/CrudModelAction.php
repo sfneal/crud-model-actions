@@ -34,7 +34,7 @@ abstract class CrudModelAction extends Action
      * @param  int|EloquentModel|null  $model
      * @param  int|null  $related_model_key
      */
-    public function __construct(Request $request = null, $model = null, int $related_model_key = null)
+    public function __construct(?Request $request = null, $model = null, ?int $related_model_key = null)
     {
         $this->request = $request ?? request();
         $this->model = $this->resolveModel($model);

@@ -91,7 +91,7 @@ abstract class CrudModelActionTestCase extends TestCase implements RequestCreato
      * @param  string|null  $expectedModel
      * @param  string  $inputKey
      */
-    protected function queryAssertions($model, string $expectedModel = null, string $inputKey = 'data'): void
+    protected function queryAssertions($model, ?string $expectedModel = null, string $inputKey = 'data'): void
     {
         $this->assertInstanceOf(Model::class, $model);
         $this->assertInstanceOf($expectedModel ?? People::class, $model);

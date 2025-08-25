@@ -15,7 +15,7 @@ trait HttpResponses
      * @param  string|null  $response
      * @return string
      */
-    protected function successResponse(string $response = null): string
+    protected function successResponse(?string $response = null): string
     {
         // Set the response during runtime
         if (isset($response)) {

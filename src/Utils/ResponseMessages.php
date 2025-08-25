@@ -32,7 +32,7 @@ trait ResponseMessages
      * @param  string|null  $message
      * @return string
      */
-    protected function successMessage(string $message = null): string
+    protected function successMessage(?string $message = null): string
     {
         // Set the message during runtime
         if (isset($message)) {
@@ -56,7 +56,7 @@ trait ResponseMessages
      * @param  string|null  $noun
      * @return string
      */
-    protected function successNoun(string $noun = null): string
+    protected function successNoun(?string $noun = null): string
     {
         // todo: add spaces to CamelCase $nouns
         // todo: add ID
@@ -75,7 +75,7 @@ trait ResponseMessages
      * @param  string|null  $verb
      * @return string
      */
-    protected function successActionVerb(string $verb = null): string
+    protected function successActionVerb(?string $verb = null): string
     {
         if (isset($verb)) {
             $this->successActionVerb = $verb;
@@ -90,7 +90,7 @@ trait ResponseMessages
      * @param  string|null  $message
      * @return string
      */
-    protected function failMessage(string $message = null): string
+    protected function failMessage(?string $message = null): string
     {
         // Set the message during runtime
         if (isset($message)) {
